@@ -1,0 +1,387 @@
+<!doctype html>
+  <html lang="id">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pinnaz — Ruang Kenangan Kita</title>
+      <link
+        rel="icon"
+        href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f338.png"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="styles.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/lenis@1.3.26/dist/lenis.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+      <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+    </head>
+    <body class="is-loading">
+      <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-inner">
+          <span class="loader-mark">Pinnaz</span>
+          <span class="loader-sub">memuat kenangan…</span>
+        </div>
+      </div>
+
+      <div class="petals" aria-hidden="true"></div>
+
+      <div class="scroll-track" aria-hidden="true"></div>
+      <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+      <div class="scroll-percent" id="scrollPercent" aria-hidden="true">0%</div>
+
+      <div class="wrap">
+        <nav>
+          <div class="logo">Pinnaz</div>
+          <div class="navlinks">
+            <a href="#tentang">Tentang</a>
+            <a href="#cerita">Cerita</a>
+            <a href="#momen">Momen</a>
+            <a href="#surat">Surat</a>
+            <a href="#kontak">Kontak</a>
+          </div>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Ubah tema"
+          >
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Buka menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+        
+        <section id="hero" class="hero">
+          <div class="hero-text">
+            <h1>About <span class="script">Us</span></h1>
+            <p class="hero-sub">
+              Beberapa baris kata yang menenangkan, dan kisah sederhana
+            </p>
+            <div class="hero-actions">
+              <a href="#cerita" class="btn-primary">Buka Cerita</a>
+              <a href="#momen" class="btn-ghost">Lihat Galeri</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="night"></div>
+            <div class="flowers">
+              <div class="flower flower--1">
+                <div class="flower__leafs flower__leafs--1">
+                  <div class="flower__leaf flower__leaf--1"></div>
+                  <div class="flower__leaf flower__leaf--2"></div>
+                  <div class="flower__leaf flower__leaf--3"></div>
+                  <div class="flower__leaf flower__leaf--4"></div>
+                </div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__line">
+                  <div class="flower__line__leaf flower__line__leaf--1"></div>
+                  <div class="flower__line__leaf flower__line__leaf--2"></div>
+                  <div class="flower__line__leaf flower__line__leaf--3"></div>
+                  <div class="flower__line__leaf flower__line__leaf--4"></div>
+                  <div class="flower__line__leaf flower__line__leaf--5"></div>
+                  <div class="flower__line__leaf flower__line__leaf--6"></div>
+                </div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+                <div class="flower__light flower__light--5"></div>
+                <div class="flower__light flower__light--6"></div>
+                <div class="flower__light flower__light--7"></div>
+                <div class="flower__light flower__light--8"></div>
+              </div>
+
+              <div class="flower flower--2">
+                <div class="flower__leafs flower__leafs--2">
+                  <div class="flower__leaf flower__leaf--1"></div>
+                  <div class="flower__leaf flower__leaf--2"></div>
+                  <div class="flower__leaf flower__leaf--3"></div>
+                  <div class="flower__leaf flower__leaf--4"></div>
+                </div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__line">
+                  <div class="flower__line__leaf flower__line__leaf--1"></div>
+                  <div class="flower__line__leaf flower__line__leaf--2"></div>
+                  <div class="flower__line__leaf flower__line__leaf--3"></div>
+                  <div class="flower__line__leaf flower__line__leaf--4"></div>
+                </div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+                <div class="flower__light flower__light--5"></div>
+                <div class="flower__light flower__light--6"></div>
+                <div class="flower__light flower__light--7"></div>
+                <div class="flower__light flower__light--8"></div>
+              </div>
+
+              <div class="flower flower--3">
+                <div class="flower__leafs flower__leafs--3">
+                  <div class="flower__leaf flower__leaf--1"></div>
+                  <div class="flower__leaf flower__leaf--2"></div>
+                  <div class="flower__leaf flower__leaf--3"></div>
+                  <div class="flower__leaf flower__leaf--4"></div>
+                </div>
+                <div class="flower__white-circle"></div>
+                <div class="flower__line">
+                  <div class="flower__line__leaf flower__line__leaf--1"></div>
+                  <div class="flower__line__leaf flower__line__leaf--2"></div>
+                  <div class="flower__line__leaf flower__line__leaf--3"></div>
+                  <div class="flower__line__leaf flower__line__leaf--4"></div>
+                </div>
+                <div class="flower__light flower__light--1"></div>
+                <div class="flower__light flower__light--2"></div>
+                <div class="flower__light flower__light--3"></div>
+                <div class="flower__light flower__light--4"></div>
+                <div class="flower__light flower__light--5"></div>
+                <div class="flower__light flower__light--6"></div>
+                <div class="flower__light flower__light--7"></div>
+                <div class="flower__light flower__light--8"></div>
+              </div>
+            </div>
+            <span class="visual-tag">a little bloom in the heart</span>
+          </div>
+        </section>
+
+        <section id="tentang" class="about">
+          <div class="about-label">
+            <div class="eyebrow"><span class="dot"></span>Tentang</div>
+          </div>
+          <blockquote>
+            <p>
+              Ini ruang pribadi kita. Tempat menulis, merawat rasa, dan
+              mengumpulkan hal-hal kecil yang bikin hari terasa lebih hangat.
+              Pelan-pelan, apa adanya.
+            </p>
+          </blockquote>
+        </section>
+
+        <section id="cerita" class="timeline">
+          <div class="section-head">
+            <h2>Cerita kita</h2>
+            <span class="count">dari waktu ke waktu</span>
+          </div>
+
+          <div class="timeline-list" id="timelineList">
+            <div class="t-line"></div>
+            <div class="t-line-progress" id="tLineProgress"></div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content">
+                <h3>Awal cerita</h3>
+                <p>
+                  Semua berawal dari obrolan sederhana di kelas, dia yang selalu
+                  bertanya terlebih dahulu lalu sampai di suatu ketika aku dan dia
+                  sudah terasa akrab dan yaa dari situ kita sudah coba mulai dari
+                  yang berawalnya berteman kita coba membangun sebuah komitmen
+                  hingga sekarang.
+                </p>
+              </div>
+            </div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content">
+                <h3>Momen berkesan</h3>
+                <p>
+                  Hujan-hujanan bersama, mengerjakan tugas bersama lalu pergi ke
+                  bangku belakang untuk bercanda dan berbincang apapun yang ada di
+                  isi pikiran.
+                </p>
+              </div>
+            </div>
+            <div class="t-item">
+              <div class="t-dot"></div>
+              <div class="t-content">
+                <h3>Sampai sekarang</h3>
+                <p>
+                  Kita terus berkembang bersama, saling mendukung dalam setiap
+                  tantangan dan merayakan setiap keberhasilan yang kita capai.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="momen" class="moments">
+          <div class="section-head">
+            <h2>Momen favorit</h2>
+            <span class="count">geser terus, klik buat lihat penuh</span>
+          </div>
+
+          <div class="marquee-wrap">
+            <div class="marquee marquee-left">
+              <div class="marquee-track">
+                <button class="marquee-item" data-index="0" type="button">
+                  <img src="src/1000477838.webp" alt="Foto momen 1" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="1" type="button">
+                  <img src="src/1000477839.webp" alt="Foto momen 2" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="2" type="button">
+                  <img src="src/1000477840.webp" alt="Foto momen 3" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="3" type="button">
+                  <img src="src/1000477841.webp" alt="Foto momen 4" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="4" type="button">
+                  <img src="src/1000477843.webp" alt="Foto momen 5" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="marquee marquee-right">
+              <div class="marquee-track">
+                <button class="marquee-item" data-index="5" type="button">
+                  <img src="src/1000477844.webp" alt="Foto momen 6" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="6" type="button">
+                  <img src="src/1000477845.webp" alt="Foto momen 7" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="7" type="button">
+                  <img src="src/1000477846.webp" alt="Foto momen 8" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="8" type="button">
+                  <img src="src/1000477847.webp" alt="Foto momen 9" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+                <button class="marquee-item" data-index="9" type="button">
+                  <img src="src/1000477848.webp" alt="Foto momen 10" loading="lazy" />
+                  <span class="marquee-caption"><em>Momen</em></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="surat" class="letter">
+          <div class="section-head">
+            <h2>Untukmu</h2>
+            <span class="count">buka kalau siap</span>
+          </div>
+
+          <div class="letter-wrap two">
+            <div class="envelope-wrap">
+              <button
+                class="envelope"
+                id="envelopeLeft"
+                type="button"
+                aria-expanded="false"
+                aria-controls="letterContentLeft"
+              >
+                <span class="envelope-flap"></span>
+                <span class="envelope-body"></span>
+                <span class="envelope-heart"><i class="fa-regular fa-heart" aria-hidden="true"></i></span>
+                <span class="envelope-hint">Klik amplopnya</span>
+              </button>
+
+              <div class="letter-content" id="letterContentLeft" hidden>
+                <h2>from <em>Feyy</em></h2>
+                <p>
+                  Hai, ini surat kecil untukmu. Aku ingin bilang terima kasih
+                  karena sudah menjadi bagian dari hidupku. Setiap momen yang kita
+                  lalui bersama selalu membuatku tersenyum dan merasa beruntung.
+                </p>
+                <p>
+                  Aku sangat menikmati waktu yang kita habiskan bersama, baik itu
+                  saat kita berbicara, tertawa, maupun hanya diam dalam kehangatan
+                  yang kita ciptakan. Kita adalah satu pasangan yang sedang
+                  berusaha saling memahami dan mendukung.
+                </p>
+                <span class="letter-sign">— untuk najell</span>
+              </div>
+            </div>
+
+            <div class="envelope-wrap">
+              <button
+                class="envelope"
+                id="envelopeRight"
+                type="button"
+                aria-expanded="false"
+                aria-controls="letterContentRight"
+              >
+                <span class="envelope-flap"></span>
+                <span class="envelope-body"></span>
+                <span class="envelope-heart"><i class="fa-regular fa-heart" aria-hidden="true"></i></span>
+                <span class="envelope-hint">Klik amplopnya</span>
+              </button>
+
+              <div class="letter-content" id="letterContentRight" hidden>
+                <h2>from <em>Najell</em></h2>
+                <p>
+                  Dari awal aku ga kepikiran kita bakal sejauh ini, karena
+                  pertama kali aku deket sama kamu tuh first impression aku kaya
+                  "eh ini orang asik juga yah, nyambung obrolannya" dari situ pun
+                  aku mikirnya cuman pengen temenan sama kamu.
+                </p>
+                <p>
+                  Pokoknya di awal aku banyak banget pertimbangan sampai
+                  akhirnya aku rasa aku suka kamu. Perjalanan kita nggak selalu
+                  mulus, tapi kita masih yakin buat tetap bareng.
+                </p>
+                <span class="letter-sign">— untuk feyy</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="kontak" class="contact">
+          <div class="eyebrow"><span class="dot"></span>Sampai jumpa</div>
+          <h2>Mampir dan <span class="script">say hi</span></h2>
+          <a href="mailto:relllaxsa@gmail.com" class="btn-primary">Kirim Email</a>
+          <div class="socials">
+            <a href="https://www.instagram.com/fyazrmy/">Instagram</a>
+            <a href="https://github.com/Feylxs">github</a>
+          </div>
+        </section>
+
+        <footer>
+          <span>© Feyy</span>
+          <span>dibuat dengan pelan-pelan <i class="fa-regular fa-heart footer-heart" aria-hidden="true"></i></span>
+        </footer>
+      </div>
+
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lb-close" id="lbClose" aria-label="Tutup">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Sebelumnya">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <figure class="lb-figure">
+          <img id="lbImg" src="" alt="" />
+          <figcaption id="lbCaption"></figcaption>
+        </figure>
+        <button class="lb-nav lb-next" id="lbNext" aria-label="Selanjutnya">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <script src="script.js"></script>
+    </body>
+  </html>
